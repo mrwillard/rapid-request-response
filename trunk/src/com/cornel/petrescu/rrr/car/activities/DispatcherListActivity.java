@@ -25,14 +25,14 @@ public class DispatcherListActivity extends ListActivity {
 
 		ListView lv = getListView();
 		lv.setTextFilterEnabled(true);
-//		lv.setClickable(false);
+
 		
 		DispatcherDao dispatcherDao = CARDaoFactory
 				.getDispatcherDao(getApplicationContext());
 		dispatcherDao.open();
 		Cursor dispatcherCursor = dispatcherDao.list();
 		startManagingCursor(dispatcherCursor);
-		//dispatcherDao.close();
+
 		// the desired columns to be bound
 		String[] columns = new String[] { DispatcherTableManager.KEY_NAME,
 				DispatcherTableManager.KEY_PHONE,
