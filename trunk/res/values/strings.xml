@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, RapidRequestResponseActivity!</string>
+    <string name="app_name">RapidRequestResponse</string>
+    <string name="sendReplyActivity">Send reply to dispatch</string>
+    <string name="sendReplyActivity.available">Available</string>
+    <string name="sendReplyActivity.availableDelayed">Available Delayed Response</string>
+    <string name="sendReplyActivity.unavailable">Unavailable</string>
+    <string name="sendReplyActivity.responding">Responding</string>
+    <string name="sendReplyActivity.notResponding">Not Responding</string>
+    <string name="sendReplyActivity.ETA">E.T.A</string>
+    <string name="sendReplyActivity.location">Location</string>
+    <string name="sendReplyActivity.reply">REPLY</string>
+    <string name="dispatcherListActivity">Dispatchers</string>
+
+</resources>
