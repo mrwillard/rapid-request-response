@@ -21,7 +21,7 @@ public class DispatcherListActivity extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dispatcher_list_activity);
+		setContentView(R.layout.dispatcher_list);
 
 		ListView lv = getListView();
 		lv.setTextFilterEnabled(true);
@@ -42,7 +42,7 @@ public class DispatcherListActivity extends ListActivity {
 				R.id.dispatcherList_number_entry,
 				R.id.dispatcherList_deleteButton };
 		final SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(this,
-				R.layout.dispatcher_list_activity_entry, dispatcherCursor,
+				R.layout.dispatcher_list_entry, dispatcherCursor,
 				columns, to) {
 
 			public void bindView(View view, android.content.Context context,
