@@ -25,7 +25,7 @@ public class SendReplyActivity extends Activity {
 		}
 		dispatcher = (DispatcherDTO) extras.get("dispatcher");
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.send_reply_activity);
+		setContentView(R.layout.send_reply);
 
 		radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
 		etaEditText = (EditText) findViewById(R.id.editText1);
