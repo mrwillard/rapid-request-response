@@ -13,5 +13,9 @@
     <string name="sendReplyActivity.location">Location</string>
     <string name="sendReplyActivity.reply">REPLY</string>
     <string name="dispatcherListActivity">Dispatchers</string>
+    <string name="addEditDispatcher.name">Name</string>
+    <string name="addEditDispatcher.phone">Phone number</string>
+    <string name="addEditDispatcher.save">Save</string>
+    <string name="addEditDispatcherActivity">Add/Edit Dispatcher</string>
 
 </resources>

@@ -1,6 +1,7 @@
 package com.cornel.petrescu.rrr.car.activities;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.cornel.petrescu.rrr.R;
 import com.cornel.petrescu.rrr.car.persistence.dao.CARDaoFactory;
 import com.cornel.petrescu.rrr.car.persistence.dao.DispatcherDao;
+import com.cornel.petrescu.rrr.car.persistence.dto.DispatcherDTO;
 import com.cornel.petrescu.rrr.car.persistence.tables.DispatcherTableManager;
 
 public class DispatcherListActivity extends ListActivity {
@@ -82,6 +84,26 @@ public class DispatcherListActivity extends ListActivity {
 						cursor.requery();
 						cAdapter.notifyDataSetChanged();
 						dispatcherDao.close();
+					}
+				});
+				
+				ImageButton modifyButton = (ImageButton) view.findViewById(R.id.dispatcherList_modifyButton);
+				modifyButton.setClickable(true);
+				modifyButton.setClickable(true);
+				modifyButton.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						DispatcherDao dispatcherDao = CARDaoFactory
+								.getDispatcherDao(getApplicationContext());
+						dispatcherDao.open();
+
+						DispatcherDTO dto = dispatcherDao.get(id);
+						dispatcherDao.close();
+						
+						Intent i = new Intent(getBaseContext(), AddEditDispatcherActivity.class);
+						i.putExtra("dispatcher", dto);
+						startActivity(i);
 					}
 				});
 			};
