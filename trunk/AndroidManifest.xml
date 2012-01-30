@@ -28,6 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+         <activity
+            android:label="@string/addEditDispatcherActivity"
+            android:name=".car.activities.AddEditDispatcherActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:label="@string/sendReplyActivity"
             android:name=".car.activities.SendReplyActivity" >
